@@ -3,7 +3,8 @@
 // connectDB(client);
 const axios = require('axios');
 const { v4: uuidv4 } = require('uuid');
-const apiKey = 'AIzaSyB1UOBnfU2NMx2soTgoz1BqhcA2jkhzflA';
+require("dotenv").config();
+const apiKey = process.env.GOOGLE_MAP_API;
 
 // Function to get coordinates of a city using Google Geocoding API
 const getCoordinates = async (city) => {
